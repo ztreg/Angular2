@@ -1,0 +1,14 @@
+<div>
+  <ng-template [ngIf]="characterInfo" [ngIfElse]="NoCharacter">
+    <ul >
+      <li>{{characterInfo.name}}</li>
+      <li>{{characterInfo.height}}</li>
+      <li>{{characterInfo.skin_color}}</li>
+    </ul>
+  </ng-template>
+
+  <ng-template #NoCharacter>
+   <h1>Loading...</h1>
+  </ng-template>
+
+</div >

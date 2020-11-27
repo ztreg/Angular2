@@ -8,7 +8,9 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CharactersComponent } from './pages/characters/characters.component';
-import { SingleCharacterComponent } from './components/single-character/single-character.component';
+import { SingleCharacterComponent } from './pages/single-character/single-character.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Characteritem } from './components/characteritem/characteritem.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { SingleCharacterComponent } from './components/single-character/single-c
     FooterComponent,
     AboutComponent,
     CharactersComponent,
-    SingleCharacterComponent
+    SingleCharacterComponent,
+    Characteritem
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

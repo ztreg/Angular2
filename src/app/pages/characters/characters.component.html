@@ -1,5 +1,14 @@
 <div>
   <h1>Welcome to SWAPI with angular</h1>
-  <app-single-character></app-single-character>
-</div>
 
+  
+  <ng-template [ngIf]="characters" [ngIfElse]="Notfound" >
+      <app-characteritem *ngFor="let character of characters" [character]="character">
+
+      </app-characteritem>
+  </ng-template>
+  <ng-template #Notfound>
+    <h2>Loading...</h2>
+  </ng-template>
+
+</div>
