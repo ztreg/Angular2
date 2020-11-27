@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Character } from '../models/Character';
+import { CharacterResponse } from '../models/CharactersResponse';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -14,17 +15,18 @@ const httpOptions = {
 })
 
 export class SWAPIService {
+
   // Här ligger fetches, urls etc
   baseURL: string = 'https://swapi.dev/api/'
   peopleURL: string = `${this.baseURL}people`
-  constructor(private http: HttpClient) { }
+  constructor(private fetch: HttpClient) { }
 
-  getCharacters():Observable<any> {
-    return this.http.get(this.peopleURL)
+  getCharacters():Observable<CharacterResponse> {
+    return this.fetch.get<CharacterResponse>(this.peopleURL)
   }
 
   getCharacter(id: string):Observable<Character> {
-    return this.http.get<Character>(`${this.peopleURL}/${id}`)
+    return this.fetch.get<Character>(`${this.peopleURL}/${id}`)
   }
 
 }

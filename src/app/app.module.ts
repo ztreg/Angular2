@@ -11,6 +11,8 @@ import { CharactersComponent } from './pages/characters/characters.component';
 import { SingleCharacterComponent } from './pages/single-character/single-character.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Characteritem } from './components/characteritem/characteritem.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { Characteritem } from './components/characteritem/characteritem.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

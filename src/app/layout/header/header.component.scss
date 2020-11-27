@@ -7,6 +7,12 @@
   
   .nav {
     a {
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      .mat-icon {
+        margin-right: 10px;
+      }
       color: white;
       text-decoration: none;
     }
