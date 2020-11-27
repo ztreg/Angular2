@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { AboutComponent } from './pages/about/about.component';
+import { CharactersComponent } from './pages/characters/characters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    CharactersComponent
   ],
   imports: [
     BrowserModule,
