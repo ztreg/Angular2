@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  background-color: darkslateblue;
+  border-radius: 15px;
+  height: auto;
+  padding: 30px;
+  
+  .nav {
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    :hover {
+      color: red;
+    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
